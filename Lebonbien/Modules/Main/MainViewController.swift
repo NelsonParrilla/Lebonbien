@@ -59,7 +59,7 @@ class MainViewController: UIViewController {
             switch itemsRequestState {
             case .loading:
                 break
-            case .success(_):
+            case .success:
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -84,17 +84,39 @@ class MainViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
     }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mainViewModel?.items.count ?? 0
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.mainViewModel?.categories.count ?? 0
     }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
+        return self.mainViewModel?.categories[section].name
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let category = self.mainViewModel?.categories[section] else {
+            return 0
+        }
+        return self.mainViewModel?.getItemsForCategory(category: category).count ?? 0
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = mainViewModel?.items[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemCell
+
+        let category = self.mainViewModel?.categories[indexPath.section]
+        cell.itemCellModel = self.mainViewModel?.getItemsForCategory(category: category!)[indexPath.row]
+
         return cell
     }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+
 }

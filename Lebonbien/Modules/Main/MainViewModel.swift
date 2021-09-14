@@ -10,9 +10,9 @@ import Foundation
 protocol MainViewModelInterface {
 
     /**
-    *  Get Items list
-    */
-    func getItems()
+     *  Get Items array for a specific category
+     */
+    func getItemsForCategory(category: Category) -> [ItemCellModel]
 }
 
 class MainViewModel: MainViewModelInterface {
@@ -21,36 +21,79 @@ class MainViewModel: MainViewModelInterface {
 
     lazy var serverAPI: ServerAPIClient = factory.makeServerAPI()
 
+    var cellItems: [String:[ItemCellModel]] = [:]
+
     var items: [Item] = []
+
+    var categories: [Category] = []
 
     var itemsRequestState: ((ItemsRequestState) -> Void)?
 
     init(factory: MainFactoryInterface) {
         self.factory = factory
         self.itemsRequestState?(.loading)
-        getItems()
+        getItemsAndCategories()
     }
 
-    func getItems() {
+    private func getItemsAndCategories() {
 
         serverAPI.getItems() { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let items):
-                self.itemsRequestState?(.success(items: items))
-                self.items = items
-                break
+
+                // Sort by date
+                self.items = items.sorted {
+                    $0.creation_date.toDate() > $1.creation_date.toDate()
+                }
+
+                // Sort by urgency
+                self.items = self.items.sorted {
+                    $0.is_urgent && !$1.is_urgent
+                }
+
+                self.serverAPI.getCategories() { [weak self] result in
+                    guard let self = self else { return }
+                    switch result {
+                    case .success(let categories):
+                        self.categories = categories
+                        self.itemsRequestState?(.success)
+
+                    case .failure(let error):
+                        self.itemsRequestState?(.failure(error: error))
+                    }
+                }
+
             case .failure(let error):
                 self.itemsRequestState?(.failure(error: error))
-                break
             }
         }
+    }
+
+    func getItemsForCategory(category: Category) -> [ItemCellModel] {
+        let itemsByCategory = items
+            .filter({$0.category_id == category.id})
+        let itemCellModels = itemsByCategory.map {
+            ItemCellModel(title: $0.title,
+                          price: "\($0.price) €",
+                          image: $0.images_url.first?.value ?? "",
+                          isUrgent: $0.is_urgent)
+        }
+        return itemCellModels
     }
 }
 
 extension MainViewModel {
 
     enum ItemsRequestState {
-        case loading, success(items: [Item]), failure(error: Error)
+        case loading, success, failure(error: Error)
+    }
+}
+
+extension String {
+    func toDate() -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        return dateFormatter.date(from: self) ?? Date()
     }
 }
