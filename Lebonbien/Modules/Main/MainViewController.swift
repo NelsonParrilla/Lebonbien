@@ -30,11 +30,22 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    let mainViewModel: MainViewModel?
+
     lazy var tableView = UITableView()
 
     var safeArea: UILayoutGuide!
 
-    var characters = ["Link", "Zelda", "Ganondorf", "Midna"]
+    init(viewModel: MainViewModel)
+    {
+        self.mainViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        self.mainViewModel = nil
+        super.init(coder: coder)
+    }
 
     override func loadView() {
         super.loadView()
@@ -43,7 +54,20 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         setupTableView()
-
+        mainViewModel?.itemsRequestState = { [weak self] itemsRequestState in
+            guard let self = self else { return }
+            switch itemsRequestState {
+            case .loading:
+                break
+            case .success(_):
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                break
+            case .failure(_):
+                break
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -70,11 +94,11 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characters.count
+        return mainViewModel?.items.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = characters[indexPath.row]
+        cell.textLabel?.text = mainViewModel?.items[indexPath.row].title
         return cell
     }
 }

@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		521646E126F0C77C000ECEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521646E026F0C77C000ECEEB /* AppDelegate.swift */; };
-		521646E326F0C77C000ECEEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521646E226F0C77C000ECEEB /* SceneDelegate.swift */; };
 		521646EA26F0C77F000ECEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521646E926F0C77F000ECEEB /* Assets.xcassets */; };
 		521646ED26F0C77F000ECEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521646EB26F0C77F000ECEEB /* LaunchScreen.storyboard */; };
 		521646F826F0C77F000ECEEB /* LebonbienTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521646F726F0C77F000ECEEB /* LebonbienTests.swift */; };
 		5216470326F0C77F000ECEEB /* LebonbienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216470226F0C77F000ECEEB /* LebonbienUITests.swift */; };
 		5216472526F0C842000ECEEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216471D26F0C842000ECEEB /* MainViewController.swift */; };
+		5216473626F0E3EC000ECEEB /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472826F0E3EC000ECEEB /* Serializable.swift */; };
+		5216473726F0E3EC000ECEEB /* ServerAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472926F0E3EC000ECEEB /* ServerAPIClient.swift */; };
+		5216473826F0E3EC000ECEEB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472B26F0E3EC000ECEEB /* Item.swift */; };
+		5216473926F0E3EC000ECEEB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472E26F0E3EC000ECEEB /* DependencyContainer.swift */; };
+		5216473A26F0E3EC000ECEEB /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472F26F0E3EC000ECEEB /* MainFactory.swift */; };
+		5216473B26F0E3EC000ECEEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473226F0E3EC000ECEEB /* MainViewController.swift */; };
+		5216473C26F0E3EC000ECEEB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473326F0E3EC000ECEEB /* MainViewModel.swift */; };
+		5216473D26F0E3EC000ECEEB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,6 @@
 /* Begin PBXFileReference section */
 		521646DD26F0C77C000ECEEB /* Lebonbien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lebonbien.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521646E026F0C77C000ECEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		521646E226F0C77C000ECEEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		521646E926F0C77F000ECEEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		521646EC26F0C77F000ECEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		521646EE26F0C77F000ECEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 		5216470226F0C77F000ECEEB /* LebonbienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LebonbienUITests.swift; sourceTree = "<group>"; };
 		5216470426F0C77F000ECEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5216471D26F0C842000ECEEB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5216472826F0E3EC000ECEEB /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		5216472926F0E3EC000ECEEB /* ServerAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPIClient.swift; sourceTree = "<group>"; };
+		5216472B26F0E3EC000ECEEB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5216472E26F0E3EC000ECEEB /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		5216472F26F0E3EC000ECEEB /* MainFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
+		5216473226F0E3EC000ECEEB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5216473326F0E3EC000ECEEB /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				5216471B26F0C842000ECEEB /* Modules */,
+				5216472C26F0E3EC000ECEEB /* Manager */,
+				5216472A26F0E3EC000ECEEB /* Models */,
+				5216473026F0E3EC000ECEEB /* Modules */,
+				5216472726F0E3EC000ECEEB /* Networking */,
+				5216473426F0E3EC000ECEEB /* Utilities */,
 				521646E026F0C77C000ECEEB /* AppDelegate.swift */,
-				521646E226F0C77C000ECEEB /* SceneDelegate.swift */,
 				521646E926F0C77F000ECEEB /* Assets.xcassets */,
 				521646EB26F0C77F000ECEEB /* LaunchScreen.storyboard */,
 				521646EE26F0C77F000ECEEB /* Info.plist */,
@@ -139,6 +157,65 @@
 				5216471D26F0C842000ECEEB /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		5216472726F0E3EC000ECEEB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5216472826F0E3EC000ECEEB /* Serializable.swift */,
+				5216472926F0E3EC000ECEEB /* ServerAPIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5216472A26F0E3EC000ECEEB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5216472B26F0E3EC000ECEEB /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5216472C26F0E3EC000ECEEB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5216472D26F0E3EC000ECEEB /* Factory */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5216472D26F0E3EC000ECEEB /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				5216472E26F0E3EC000ECEEB /* DependencyContainer.swift */,
+				5216472F26F0E3EC000ECEEB /* MainFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		5216473026F0E3EC000ECEEB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5216473126F0E3EC000ECEEB /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5216473126F0E3EC000ECEEB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5216473226F0E3EC000ECEEB /* MainViewController.swift */,
+				5216473326F0E3EC000ECEEB /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5216473426F0E3EC000ECEEB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5216473926F0E3EC000ECEEB /* DependencyContainer.swift in Sources */,
+				5216473A26F0E3EC000ECEEB /* MainFactory.swift in Sources */,
+				5216473626F0E3EC000ECEEB /* Serializable.swift in Sources */,
+				5216473726F0E3EC000ECEEB /* ServerAPIClient.swift in Sources */,
 				521646E126F0C77C000ECEEB /* AppDelegate.swift in Sources */,
-				521646E326F0C77C000ECEEB /* SceneDelegate.swift in Sources */,
+				5216473C26F0E3EC000ECEEB /* MainViewModel.swift in Sources */,
+				5216473B26F0E3EC000ECEEB /* MainViewController.swift in Sources */,
+				5216473826F0E3EC000ECEEB /* Item.swift in Sources */,
 				5216472526F0C842000ECEEB /* MainViewController.swift in Sources */,
+				5216473D26F0E3EC000ECEEB /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
