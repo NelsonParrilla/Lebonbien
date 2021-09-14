@@ -19,8 +19,6 @@ class MainViewModel: MainViewModelInterface {
 
     let serverAPI: ServerAPIClientInterface
 
-    var cellItems: [String:[ItemCellModel]] = [:]
-
     var items: [Item] = []
 
     var categories: [Category] = []
