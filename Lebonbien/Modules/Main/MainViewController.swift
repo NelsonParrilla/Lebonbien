@@ -77,10 +77,6 @@ class MainViewController: UIViewController {
 
     // MARK: - Setup table view
     func setupTableView() {
-        let cview = UIView(frame: CGRect(x: 10, y: 40, width: 200, height: 200))
-        cview.backgroundColor = .red
-        view.addSubview(cview)
-
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
