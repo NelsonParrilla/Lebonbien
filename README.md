@@ -13,6 +13,10 @@ L'application montre une liste de vente d'objets contenant une catégorie, une i
 
 Des tests unitaires permettent de tester les princiaples fonctions de l'application.
 
+## Architecture
+
+L'exercice est fait en MVVM avec la partie model dans le dossier Model et la partie views-viewModels dans le dossier Modules.
+
 ## To do
 * Ajouter un filtre par catégorie
 * Ajouter la vue de detail d'une vente
