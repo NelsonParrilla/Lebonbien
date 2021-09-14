@@ -11,11 +11,9 @@
 		521646EA26F0C77F000ECEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521646E926F0C77F000ECEEB /* Assets.xcassets */; };
 		521646ED26F0C77F000ECEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521646EB26F0C77F000ECEEB /* LaunchScreen.storyboard */; };
 		5216470326F0C77F000ECEEB /* LebonbienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216470226F0C77F000ECEEB /* LebonbienUITests.swift */; };
-		5216472526F0C842000ECEEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216471D26F0C842000ECEEB /* MainViewController.swift */; };
 		5216473626F0E3EC000ECEEB /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472826F0E3EC000ECEEB /* Serializable.swift */; };
 		5216473726F0E3EC000ECEEB /* ServerAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472926F0E3EC000ECEEB /* ServerAPIClient.swift */; };
 		5216473826F0E3EC000ECEEB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472B26F0E3EC000ECEEB /* Item.swift */; };
-		5216473B26F0E3EC000ECEEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473226F0E3EC000ECEEB /* MainViewController.swift */; };
 		5216473C26F0E3EC000ECEEB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473326F0E3EC000ECEEB /* MainViewModel.swift */; };
 		5216473D26F0E3EC000ECEEB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */; };
 		5216474026F0EC5F000ECEEB /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473F26F0EC5F000ECEEB /* UIView+Anchor.swift */; };
@@ -26,6 +24,7 @@
 		52C6C9DE26F13A3500C05749 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C9DB26F13A3500C05749 /* MainViewTests.swift */; };
 		52C6C9DF26F13A3500C05749 /* ServerAPIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C9DD26F13A3500C05749 /* ServerAPIClientMock.swift */; };
 		52C6C9E126F13ABF00C05749 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C9E026F13ABF00C05749 /* String+Date.swift */; };
+		52C6C9E326F13FE700C05749 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C9E226F13FE700C05749 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +55,9 @@
 		521646FE26F0C77F000ECEEB /* LebonbienUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LebonbienUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216470226F0C77F000ECEEB /* LebonbienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LebonbienUITests.swift; sourceTree = "<group>"; };
 		5216470426F0C77F000ECEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5216471D26F0C842000ECEEB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5216472826F0E3EC000ECEEB /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		5216472926F0E3EC000ECEEB /* ServerAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPIClient.swift; sourceTree = "<group>"; };
 		5216472B26F0E3EC000ECEEB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		5216473226F0E3EC000ECEEB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5216473326F0E3EC000ECEEB /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		5216473F26F0EC5F000ECEEB /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
@@ -71,6 +68,7 @@
 		52C6C9DB26F13A3500C05749 /* MainViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
 		52C6C9DD26F13A3500C05749 /* ServerAPIClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPIClientMock.swift; sourceTree = "<group>"; };
 		52C6C9E026F13ABF00C05749 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		52C6C9E226F13FE700C05749 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,16 +119,15 @@
 		521646DF26F0C77C000ECEEB /* Lebonbien */ = {
 			isa = PBXGroup;
 			children = (
+				521646EE26F0C77F000ECEEB /* Info.plist */,
+				521646E026F0C77C000ECEEB /* AppDelegate.swift */,
+				521646E926F0C77F000ECEEB /* Assets.xcassets */,
 				5216473E26F0EC44000ECEEB /* Extensions */,
-				5216471B26F0C842000ECEEB /* Modules */,
+				521646EB26F0C77F000ECEEB /* LaunchScreen.storyboard */,
 				5216472A26F0E3EC000ECEEB /* Models */,
 				5216473026F0E3EC000ECEEB /* Modules */,
 				5216472726F0E3EC000ECEEB /* Networking */,
 				5216473426F0E3EC000ECEEB /* Utilities */,
-				521646E026F0C77C000ECEEB /* AppDelegate.swift */,
-				521646E926F0C77F000ECEEB /* Assets.xcassets */,
-				521646EB26F0C77F000ECEEB /* LaunchScreen.storyboard */,
-				521646EE26F0C77F000ECEEB /* Info.plist */,
 			);
 			path = Lebonbien;
 			sourceTree = "<group>";
@@ -152,22 +149,6 @@
 				5216470426F0C77F000ECEEB /* Info.plist */,
 			);
 			path = LebonbienUITests;
-			sourceTree = "<group>";
-		};
-		5216471B26F0C842000ECEEB /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				5216471C26F0C842000ECEEB /* Main */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		5216471C26F0C842000ECEEB /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				5216471D26F0C842000ECEEB /* MainViewController.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		5216472726F0E3EC000ECEEB /* Networking */ = {
@@ -199,7 +180,7 @@
 		5216473126F0E3EC000ECEEB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5216473226F0E3EC000ECEEB /* MainViewController.swift */,
+				52C6C9E226F13FE700C05749 /* MainViewController.swift */,
 				5216473326F0E3EC000ECEEB /* MainViewModel.swift */,
 				5216474126F0EC92000ECEEB /* ItemCell.swift */,
 				5216474626F0FFA7000ECEEB /* ItemCellModel.swift */,
@@ -363,15 +344,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C6C9E126F13ABF00C05749 /* String+Date.swift in Sources */,
+				52C6C9E326F13FE700C05749 /* MainViewController.swift in Sources */,
 				5216474026F0EC5F000ECEEB /* UIView+Anchor.swift in Sources */,
 				5216473626F0E3EC000ECEEB /* Serializable.swift in Sources */,
 				5216473726F0E3EC000ECEEB /* ServerAPIClient.swift in Sources */,
 				521646E126F0C77C000ECEEB /* AppDelegate.swift in Sources */,
 				5216473C26F0E3EC000ECEEB /* MainViewModel.swift in Sources */,
-				5216473B26F0E3EC000ECEEB /* MainViewController.swift in Sources */,
 				5216473826F0E3EC000ECEEB /* Item.swift in Sources */,
 				5216474526F0FEDD000ECEEB /* Category.swift in Sources */,
-				5216472526F0C842000ECEEB /* MainViewController.swift in Sources */,
 				5216474226F0EC92000ECEEB /* ItemCell.swift in Sources */,
 				5216474726F0FFA7000ECEEB /* ItemCellModel.swift in Sources */,
 				5216474926F100DA000ECEEB /* UIImageView+LoadImage.swift in Sources */,
