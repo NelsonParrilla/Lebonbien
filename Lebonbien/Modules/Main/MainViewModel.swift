@@ -17,9 +17,7 @@ protocol MainViewModelInterface {
 
 class MainViewModel: MainViewModelInterface {
 
-    let factory: MainFactoryInterface
-
-    lazy var serverAPI: ServerAPIClient = factory.makeServerAPI()
+    let serverAPI: ServerAPIClientInterface
 
     var cellItems: [String:[ItemCellModel]] = [:]
 
@@ -29,8 +27,8 @@ class MainViewModel: MainViewModelInterface {
 
     var itemsRequestState: ((ItemsRequestState) -> Void)?
 
-    init(factory: MainFactoryInterface) {
-        self.factory = factory
+    init(serverAPI: ServerAPIClientInterface) {
+        self.serverAPI = serverAPI
         self.itemsRequestState?(.loading)
         getItemsAndCategories()
     }
@@ -87,13 +85,5 @@ extension MainViewModel {
 
     enum ItemsRequestState {
         case loading, success, failure(error: Error)
-    }
-}
-
-extension String {
-    func toDate() -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        return dateFormatter.date(from: self) ?? Date()
     }
 }
