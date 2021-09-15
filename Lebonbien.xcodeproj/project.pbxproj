@@ -11,12 +11,10 @@
 		521646EA26F0C77F000ECEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521646E926F0C77F000ECEEB /* Assets.xcassets */; };
 		521646ED26F0C77F000ECEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521646EB26F0C77F000ECEEB /* LaunchScreen.storyboard */; };
 		5216470326F0C77F000ECEEB /* LebonbienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216470226F0C77F000ECEEB /* LebonbienUITests.swift */; };
-		5216473626F0E3EC000ECEEB /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472826F0E3EC000ECEEB /* Serializable.swift */; };
 		5216473726F0E3EC000ECEEB /* ServerAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472926F0E3EC000ECEEB /* ServerAPIClient.swift */; };
 		5216473826F0E3EC000ECEEB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216472B26F0E3EC000ECEEB /* Item.swift */; };
 		5216473C26F0E3EC000ECEEB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473326F0E3EC000ECEEB /* MainViewModel.swift */; };
 		5216473D26F0E3EC000ECEEB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */; };
-		5216474026F0EC5F000ECEEB /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216473F26F0EC5F000ECEEB /* UIView+Anchor.swift */; };
 		5216474226F0EC92000ECEEB /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216474126F0EC92000ECEEB /* ItemCell.swift */; };
 		5216474526F0FEDD000ECEEB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216474426F0FEDD000ECEEB /* Category.swift */; };
 		5216474726F0FFA7000ECEEB /* ItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216474626F0FFA7000ECEEB /* ItemCellModel.swift */; };
@@ -55,12 +53,10 @@
 		521646FE26F0C77F000ECEEB /* LebonbienUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LebonbienUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216470226F0C77F000ECEEB /* LebonbienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LebonbienUITests.swift; sourceTree = "<group>"; };
 		5216470426F0C77F000ECEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5216472826F0E3EC000ECEEB /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		5216472926F0E3EC000ECEEB /* ServerAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPIClient.swift; sourceTree = "<group>"; };
 		5216472B26F0E3EC000ECEEB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		5216473326F0E3EC000ECEEB /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		5216473F26F0EC5F000ECEEB /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		5216474126F0EC92000ECEEB /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		5216474426F0FEDD000ECEEB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5216474626F0FFA7000ECEEB /* ItemCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellModel.swift; sourceTree = "<group>"; };
@@ -127,7 +123,6 @@
 				5216472A26F0E3EC000ECEEB /* Models */,
 				5216473026F0E3EC000ECEEB /* Modules */,
 				5216472726F0E3EC000ECEEB /* Networking */,
-				5216473426F0E3EC000ECEEB /* Utilities */,
 			);
 			path = Lebonbien;
 			sourceTree = "<group>";
@@ -154,7 +149,6 @@
 		5216472726F0E3EC000ECEEB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				5216472826F0E3EC000ECEEB /* Serializable.swift */,
 				5216472926F0E3EC000ECEEB /* ServerAPIClient.swift */,
 			);
 			path = Networking;
@@ -188,18 +182,10 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		5216473426F0E3EC000ECEEB /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		5216473E26F0EC44000ECEEB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5216473F26F0EC5F000ECEEB /* UIView+Anchor.swift */,
+				5216473526F0E3EC000ECEEB /* UIView+Extensions.swift */,
 				5216474826F100DA000ECEEB /* UIImageView+LoadImage.swift */,
 				52C6C9E026F13ABF00C05749 /* String+Date.swift */,
 			);
@@ -345,8 +331,6 @@
 			files = (
 				52C6C9E126F13ABF00C05749 /* String+Date.swift in Sources */,
 				52C6C9E326F13FE700C05749 /* MainViewController.swift in Sources */,
-				5216474026F0EC5F000ECEEB /* UIView+Anchor.swift in Sources */,
-				5216473626F0E3EC000ECEEB /* Serializable.swift in Sources */,
 				5216473726F0E3EC000ECEEB /* ServerAPIClient.swift in Sources */,
 				521646E126F0C77C000ECEEB /* AppDelegate.swift in Sources */,
 				5216473C26F0E3EC000ECEEB /* MainViewModel.swift in Sources */,
